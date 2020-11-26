@@ -3,10 +3,10 @@ package gurifu;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println(generateFizzBuzzStr(100));
+        System.out.println(generateFizzBuzzString(100));
     }
 
-    public static String generateFizzBuzzStr(int maxCount) {
+    public static String generateFizzBuzzString(int maxCount) {
         String fizzBuzzStr = "";
         for (int i = 1; i <= maxCount; ++i) {
             if (i % 3 == 0 && i % 5 == 0) {
@@ -15,6 +15,8 @@ public class App {
                 fizzBuzzStr += "Fizz,";
             } else if (i % 5 == 0) {
                 fizzBuzzStr += "Buzz,";
+            } else {
+                fizzBuzzStr += i + ",";
             }
         }
         return fizzBuzzStr;
